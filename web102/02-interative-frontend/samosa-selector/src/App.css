@@ -64,6 +64,7 @@
 
 .upgrade {
   border: 1px solid rgba(153, 153, 153, 0.497);
+  border-radius: 15px;
   padding: 20px 10px 20px 10px;
   margin-right: 25px;
   width: 200px;
