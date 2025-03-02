@@ -1,0 +1,3 @@
+[submodule "web102/02-interative-frontend/cs-trivia"]
+	path = web102/02-interative-frontend/cs-trivia
+	url = git@github.com:EdsonPetry/cs-trivia.git
