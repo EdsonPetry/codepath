@@ -1,6 +1,10 @@
 """
 Problem 7: Identify Repeated Themes
-Themes often recur across different scenes to reinforce key ideas or emotions. Identifying these repeated themes is crucial for analyzing the narrative structure and ensuring thematic consistency. Write a function that, given a list of scenes with their associated themes, identifies themes that appear more than once and returns a list of these repeated themes.
+Themes often recur across different scenes to reinforce key ideas or emotions. 
+Identifying these repeated themes is crucial for analyzing the narrative structure 
+and ensuring thematic consistency. Write a function that, given a list of scenes with 
+their associated themes, identifies themes that appear more than once and returns a list 
+of these repeated themes.
 
 Track the occurrence of each theme and then extract and return the themes that appear more than once.
 
@@ -36,7 +40,15 @@ def main():
     ['exploration', 'danger']
     """
 def identify_repeated_themes(scenes):
-  pass
+    visited = set()
+    res = set()
 
+    for theme in scenes:
+        if theme["theme"] in visited:
+            res.add(theme['theme'])
+        else:
+            visited.add(theme['theme'])
+
+    return list(res)
 if __name__ == "__main__":
    main()

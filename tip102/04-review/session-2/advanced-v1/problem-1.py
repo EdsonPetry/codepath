@@ -1,8 +1,10 @@
 """
 Problem 1: Count Unique Characters in a Script
-Given a dictionary where the keys are character names and the values are lists of their dialogue lines, count the number of unique characters in the script.
+Given a dictionary where the keys are character names and the values are lists of their 
+dialogue lines, count the number of unique characters in the script.
 
-Evaluate the time and space complexity of your solution. Define your variables and provide a rationale for why you believe your solution has the stated time and space complexity.
+Evaluate the time and space complexity of your solution. Define your variables and provide 
+a rationale for why you believe your solution has the stated time and space complexity.
 """
 
 def main():
@@ -27,7 +29,7 @@ Example Output:
 """
 
 def count_unique_characters(script):
-  pass
+  return len(set(script.keys()))
 
 if __name__ == "__main__":
    main()
