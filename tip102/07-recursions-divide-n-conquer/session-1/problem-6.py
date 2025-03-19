@@ -17,8 +17,21 @@ Example 2 Explanation: The maximum strength among the Avengers is 90.
 """
 
 
-def strongest_avenger(strengths):
-    pass
+def strongest_avenger(strengths, curr_max=0):
+    if len(strengths) == 1:
+        if strengths[0]>curr_max:
+            return strengths[0]
+        else:
+            return curr_max
+    half = len(strengths)//2
+    #return the max of left and right subarray
+    left = strongest_avenger(strengths[:half], curr_max)
+    right = strongest_avenger(strengths[half:], curr_max)
+    if left>right:
+        return left
+    else:
+        return right
+    
 
 
 def main():

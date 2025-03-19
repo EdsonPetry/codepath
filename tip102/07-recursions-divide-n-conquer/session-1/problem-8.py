@@ -14,6 +14,9 @@ Return the head of the merged mission linked list.
 
 Example output:
 1 -> 1 -> 2 -> 3 -> 4 -> 4
+
+mission1 = 1 -> 5
+mission2 = 2->3->4
 """
 
 
@@ -32,6 +35,14 @@ def print_linked_list(head):
 
 
 def merge_missions(mission1, mission2):
+    if mission2 
+    if mission2.value == mission1.value or (mission2.value >mission1.value and mission2.value<mission1.next.value):
+        #do stuff to insert mission2 into mission1
+    
+        merge_missions(mission1, mission2.next)
+    else:
+        merge_missions(mission1.next, mission2.next)
+    
     pass
 
 

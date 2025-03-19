@@ -15,11 +15,17 @@ Example Output:
 
 
 def count_suits_iterative(suits):
-    pass
+    count = 0
+    for suit in suits:
+        count += 1
+    return count
 
 
 def count_suits_recursive(suits):
-    pass
+    if len(suits) == 1:
+        return 1
+    half = len(suits)//2
+    return count_suits_recursive(suits[0:half])+count_suits_recursive(suits[half:len(suits)])
 
 
 def main():

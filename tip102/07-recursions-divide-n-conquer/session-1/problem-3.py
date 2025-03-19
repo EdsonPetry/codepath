@@ -18,16 +18,22 @@ Example Output:
 
 
 def count_suits_iterative(suits):
-    pass
+    return len(set(suits))
 
 
-def count_suits_recursive(suits):
-    pass
+def count_suits_recursive(suits, unique_set):
+    if len(suits) == 1:
+        unique_set.add(suits[0])
+        return unique_set
+    half = len(suits)//2
+    count_suits_recursive(suits[0:half], unique_set)
+    count_suits_recursive(suits[half:len(suits)],unique_set)
+    return len(unique_set)
 
 
 def main():
     print(count_suits_iterative(["Mark I", "Mark II", "Mark III"]))
-    print(count_suits_recursive(["Mark I", "Mark I", "Mark III"]))
+    print(count_suits_recursive(["Mark I", "Mark I", "Mark III"], set()))
 
 
 if __name__ == "__main__":

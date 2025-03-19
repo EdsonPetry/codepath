@@ -12,15 +12,21 @@ stated time complexity.
 Example Output:
 
 16
-Example 1 Explanation: 2 to the 4th power (4 * 4) is 16.
+Example 1 Explanation: 4 to the 2nd power (4 * 4) is 16.
 16
-Example 2 Explanation: -2 to the 4th power is 1/(4 * 4) is 0.0625.
+Example 2 Explanation: 4 to the -2th power is 1/(4 * 4) is 0.0625.
 
 """
 
 
 def power_of_four(n):
-    pass
+    if n == 0:
+        return 1
+    if n == 1:
+        return 4
+    if n<0:
+        return (1/power_of_four(-n))
+    return power_of_four(n-1)*4
 
 
 def main():

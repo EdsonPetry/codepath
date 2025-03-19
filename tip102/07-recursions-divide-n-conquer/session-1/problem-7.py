@@ -20,7 +20,14 @@ therefore there are two vibranium deposits in the string.
 
 
 def count_deposits(resources):
-    pass
+    if len(resources) ==1:
+        if resources[0] == 'V':
+            return 1
+        else:
+            return 0
+    
+    half = len(resources)//2
+    return count_deposits(resources[:half]) + count_deposits(resources[half:])
 
 
 def main():

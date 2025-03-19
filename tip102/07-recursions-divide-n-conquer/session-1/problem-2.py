@@ -14,12 +14,19 @@ Example Output:
 
 
 def sum_stones(stones):
-    pass
+    if len(stones) == 0:
+        return 0
+    if len(stones) == 1:
+        return stones[0]
+    
+    half = len(stones)//2
+    return sum_stones(stones[0:half]) + sum_stones(stones[half:])
 
 
 def main():
     print(sum_stones([5, 10, 15, 20, 25, 30]))
     print(sum_stones([12, 8, 22, 16, 10]))
+    print(sum_stones([]))
 
 
 if __name__ == "__main__":

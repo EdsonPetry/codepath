@@ -21,7 +21,11 @@ Example Output:
 
 
 def fibonacci_growth(n):
-    pass
+    if n == 1: 
+        return 1
+    if n == 0:
+        return 0
+    return fibonacci_growth(n-1) + fibonacci_growth(n-2)
 
 
 def main():
